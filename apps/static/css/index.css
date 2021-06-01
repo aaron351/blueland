@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 60px;
+    background: rgb(24, 39, 248);
+    display: flex;
+    padding: 0 20px;
+}
+
+.menu-toggle{
+    display: none;
+    margin-left: auto;
+    color: rgb(247, 247, 247);
+    line-height: 60px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.logo a{
+    color: rgb(240, 240, 240);
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 60px;
+    text-transform: uppercase;
+    font-family: var(--bs-font-sans-serif);
+}
+
+#menu{
+    margin-left: auto;
+}
+
+#menu ul li{
+    display: inline-block;
+}
+
+#menu ul li a{
+    display: inline-block;
+    position: relative;
+    color:  rgb(255, 255, 255);
+    text-decoration: none;
+    line-height: 60px;
+    padding: 0 8px;
+    text-transform: uppercase;
+    transition: .2s;
+}
+ 
+#menu ul li a:hover{
+    background: rgb(73, 91, 255);
+}
+
+.show{
+    z-index: 1080;
+    height: 245px !important;
+}
+
+@media screen and (max-width: 700px) { 
+    .menu-toggle{   
+        z-index: 1000;
+        display: block;             
+    }
+    #menu{
+        background: rgb(24, 39, 248);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: 0;
+        /*border: solid rgb(189, 184, 184);*/
+        overflow: hidden;
+        transition: 0.3s ease-out;
+    }
+
+    #menu ul li {
+        display: block;
+        text-align: center;
+    }
+
+    #menu ul li a{
+        color: white;
+        font-size: 20px;
+        border-bottom: 1px solid rgb(73, 91, 255);
+        width: 100%;
+    }
+
+    #menu ul li a:hover{
+        background: rgb(73, 91, 255);
+    }
+
+    .container{
+        padding: 10px;    
+    }
+}
+/*Scroll bar*/
+::-webkit-scrollbar {
+    width: 2px; /* ancho barra */
+  }
+  ::-webkit-scrollbar-track {
+    background: black; /* color fondo barra */
+    opacity: 0;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(24, 39, 248); /* color barra */
+    border-radius: 50px; /* borde barra */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(73, 91, 255); /* color barra hover */
+  }
+
+  /*body*/
+.izquierda-vol{
+  flex-wrap: wrap;
+  align-items: center;
+  height: 50%;
+  width: 50%;
+}
+.izquierda-vol h2{
+  margin-top: 20%;
+  text-align: center;
+}
+.izquierda-vol p{
+  padding: 25px;
+  text-align: center;
+  margin-bottom: 10%;
+}
+.derecha-vol{
+  align-items: center;
+  width: 50%;
+  height: 50%;
+}
+.derecha-vol img{
+  margin-top: 10%;
+  margin-left: 15%;
+  width: 70%;
+  height: 50%;
+}
+#volcanes{
+  display: flex;
+}
+
+#Hoteles{
+  display: flex;
+}
+.izquierda-hotel{
+  width: 50%;
+  height: 50%;
+}
+.izquierda-hotel img{
+  margin-top: 10%;
+  margin-left: 15%;
+  width: 70%;
+  height: 50%;
+}
+.derecha-hotel{
+  align-items: center;
+  height: 50%;
+  width: 50%;
+}
+.derecha-hotel h2{
+  margin-top: 20%;
+  text-align: center;
+}
+.derecha-hotel p{
+  padding: 25px;
+  text-align: center;
+  margin-bottom: 10%;
+}
+.cotenedorhead{
+	box-sizing: border-box;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}

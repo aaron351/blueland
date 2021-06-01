@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+    <title>Usuario</title>
+    {% load static %}
+    <!--Barra de meni-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--fa fa-icon-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/sliderProd.css">
+    <!--light css-->
+    <link rel="stylesheet" href="/static/css/lightslider.css">
+    <!--jquery-->
+    <script type="text/javascript" src="{% static "jquery.js" %}"></script>
+    <!--light slider js-->
+    <script type="text/javascript" src="{% static "lightslider.js" %}"></script>
+     
+</head>
+
+<body>
+    <!-- Barra de menu -->
+    <header class="cotenedorhead">
+        <div class="logo" data-aos="fade-left">
+        {% if user.is_authenticated %}
+            <a href="/">Hola {{ user.get_username }}</a>
+        {% endif %}
+
+        </div>
+        <nav id="menu">
+            <ul>
+                <li><a href="#turismo">Turismo</a></li>
+                <li><a href="#restaurante">Restaurantes</a></li>
+                <li><a href="#hotel">Hoteles</a></li>
+                <li><a href="#">Pedidos</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" style="z-index:1080;" data-aos="fade-down">
+            <i class="fa fa-bars"></i>
+        </div>
+    </header>
+    <script src="../script/index.js"></script>
+    <!-- Barra de menu -->
+    <!--Body-->
+    <h2 id="hotel" data-aos="fade-left">Hoteles</h2>
+    <section>
+        <ul id="autoWidth" class="cS-hidden">
+            <li class="item-a">
+                <div class="box">
+                    <!--div para imagen del producto-->
+                    <div class="slide-img">
+                        <img src="/static/jpg/Caminoreal.jpg" alt="Camino Real">
+                        <div class="overlay">
+                            <a class="buy-btn" href="#">Comprar ahora</a>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="type">
+                            <a href="#">Hotel Camino Real</a>
+                            <span>No hay stock</span>
+                        </div>
+                        <a class="price" href="#">$25</a>
+                    </div>
+                </div>
+            </li>
+            <li class="item-b">
+                <div class="box">
+                    <!--div para imagen del producto-->
+                    <div class="slide-img">
+                        <img src="/static/jpg/Hotel selina.jpg" alt="Hotel selina">
+                        <div class="overlay">
+                            <a class="buy-btn" href="#">Comprar ahora</a>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="type">
+                            <a href="#">Hotel Selina</a>
+                            <span>Con stock</span>
+                        </div>
+                        <a class="price" href="#">$25</a>
+                    </div>
+                </div>
+            </li>
+            <li class="item-c">
+                <div class="box">
+                    <!--div para imagen del producto-->
+                    <div class="slide-img">
+                        <img src="/static/jpg/Hotel los robles.jpg" alt="Camino los robles">
+                        <div class="overlay">
+                            <a class="buy-btn" href="#">Comprar ahora</a>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="type">
+                            <a href="#">Hotel los robles</a>
+                            <span>No hay stock</span>
+                        </div>
+                        <a class="price" href="#">$25</a>
+                    </div>
+                </div>
+            </li>
+            <li class="item-d">
+                <div class="box">
+                    <!--div para imagen del producto-->
+                    <div class="slide-img">
+                        <img src="/static/jpg/Hotel Barcelo.jpg" alt="Camino Barcelo">
+                        <div class="overlay">
+                            <a class="buy-btn" href="#">Comprar ahora</a>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="type">
+                            <a href="#">Hotel Barcelo</a>
+                            <span>Con stock</span>
+                        </div>
+                        <a class="price" href="#">$25</a>
+                    </div>
+                </div>
+            </li>
+            <li class="item-e">
+                <div class="box">
+                    <!--div para imagen del producto-->
+                    <div class="slide-img">
+                        <img src="/static/jpg/Hotel Barcelo.jpg" alt="Camino Barcelo">
+                        <div class="overlay">
+                            <a class="buy-btn" href="#">Comprar ahora</a>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="type">
+                            <a href="#">Hotel Barcelo</a>
+                            <span>Con stock</span>
+                        </div>
+                        <a class="price" href="#">$25</a>
+                    </div>
+                </div>
+            </li>
+            <li class="item-f">
+                <div class="box">
+                    <!--div para imagen del producto-->
+                    <div class="slide-img">
+                        <img src="/static/jpg/Hotel Barcelo.jpg" alt="Camino Barcelo">
+                        <div class="overlay">
+                            <a class="buy-btn" href="#">Comprar ahora</a>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="type">
+                            <a href="#">Hotel Barcelo</a>
+                            <span>Con stock</span>
+                        </div>
+                        <a class="price" href="#">$25</a>
+                    </div>
+                </div>
+            </li>
+            <li class="item-g">
+                <div class="box">
+                    <!--div para imagen del producto-->
+                    <div class="slide-img">
+                        <img src="/static/jpg/Hotel Barcelo.jpg" alt="Camino Barcelo">
+                        <div class="overlay">
+                            <a class="buy-btn" href="#">Comprar ahora</a>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="type">
+                            <a href="#">Hotel Barcelo</a>
+                            <span>Con stock</span>
+                        </div>
+                        <a class="price" href="#">$25</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <script type="text/javascript" src="{% static "script.js" %}"></script>
+    </section>
+    <h2 id="restaurante" data-aos="fade-left">Restaurantes</h2>
+    <section> 
+        <ul id="autoWidth2" class="cS-hidden">
+            <li class="item-a">
+                <div class="box">
+                    <!--div para imagen del producto-->
+                    <div class="slide-img">
+                        <img src="/static/jpg/MIranchito.jpg" alt="Camino Real">
+                        <div class="overlay">
+                            <a class="buy-btn" href="#">Comprar ahora</a>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="type">
+                            <a href="#">Restaurante mi ranchito</a>
+                            <span>No hay stock</span>
+                        </div>
+                        <a class="price" href="#">$25</a>
+                    </div>
+                </div>
+            </li>
+            <li class="item-b">
+                <div class="box">
+                    <!--div para imagen del producto-->
+                    <div class="slide-img">
+                        <img src="/static/jpg/Lagranmanagua.jpg" alt="Hotel selina">
+                        <div class="overlay">
+                            <a class="buy-btn" href="#">Comprar ahora</a>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="type">
+                            <a href="#">Restaurante La gran managua</a>
+                            <span>Con stock</span>
+                        </div>
+                        <a class="price" href="#">$25</a>
+                    </div>
+                </div>
+            </li>
+            <li class="item-c">
+                <div class="box">
+                    <!--div para imagen del producto-->
+                    <div class="slide-img">
+                        <img src="/static/jpg/Friday's.jpg" alt="Camino los robles">
+                        <div class="overlay">
+                            <a class="buy-btn" href="#">Comprar ahora</a>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="type">
+                            <a href="#">Restaurante Friday's</a>
+                            <span>No hay stock</span>
+                        </div>
+                        <a class="price" href="#">$25</a>
+                    </div>
+                </div>
+            </li>
+            <li class="item-d">
+                <div class="box">
+                    <!--div para imagen del producto-->
+                    <div class="slide-img">
+                        <img src="/static/jpg/laplancha.jpg" alt="Camino Barcelo">
+                        <div class="overlay">
+                            <a class="buy-btn" href="#">Comprar ahora</a>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="type">
+                            <a href="#">Restaurante La gran hazaña</a>
+                            <span>Con stock</span>
+                        </div>
+                        <a class="price" href="#">$25</a>
+                    </div>
+                </div>
+            </li>
+            <li class="item-e">
+                <div class="box">
+                    <!--div para imagen del producto-->
+                    <div class="slide-img">
+                        <img src="/static/jpg/Elskimo.jpg" alt="Camino Barcelo">
+                        <div class="overlay">
+                            <a class="buy-btn" href="#">Comprar ahora</a>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="type">
+                            <a href="#">Restaurante el skimo</a>
+                            <span>Con stock</span>
+                        </div>
+                        <a class="price" href="#">$25</a>
+                    </div>
+                </div>
+            </li>
+            <li class="item-f">
+                <div class="box">
+                    <!--div para imagen del producto-->
+                    <div class="slide-img">
+                        <img src="/static/jpg/Lafinca.jpg" alt="Camino Barcelo">
+                        <div class="overlay">
+                            <a class="buy-btn" href="#">Comprar ahora</a>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="type">
+                            <a href="#">Restaurante la finca</a>
+                            <span>Con stock</span>
+                        </div>
+                        <a class="price" href="#">$25</a>
+                    </div>
+                </div>
+            </li>
+            <li class="item-g">
+                <div class="box">
+                    <!--div para imagen del producto-->
+                    <div class="slide-img">
+                        <img src="/static/jpg/Volcanes.jpg" alt="Camino Barcelo">
+                        <div class="overlay">
+                            <a class="buy-btn" href="#">Comprar ahora</a>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="type">
+                            <a href="#">Restaurante volcanes</a>
+                            <span>Con stock</span>
+                        </div>
+                        <a class="price" href="#">$25</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <script type="text/javascript" src="{% static "script2.js" %}"></script>
+    </section>
+
+    <h2 id="turismo" data-aos="fade-left"> Lugares turisticos </h2>
+
+    <section data-aos="fade-left">
+        <ul id="autoWidth3" class="cS-hidden">
+            <li class="item-a">
+                <div class="box">
+                    <!--div para imagen del producto-->
+                    <div class="slide-img">
+                        <img src="/static/jpg/MIranchito.jpg" alt="Camino Real">
+                        <div class="overlay">
+                            <a class="buy-btn" href="#">Comprar ahora</a>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="type">
+                            <a href="#">Restaurante mi ranchito</a>
+                            <span>No hay stock</span>
+                        </div>
+                        <a class="price" href="#">$25</a>
+                    </div>
+                </div>
+            </li>
+            <li class="item-b">
+                <div class="box">
+                    <!--div para imagen del producto-->
+                    <div class="slide-img">
+                        <img src="/static/jpg/Lagranmanagua.jpg" alt="Hotel selina">
+                        <div class="overlay">
+                            <a class="buy-btn" href="#">Comprar ahora</a>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="type">
+                            <a href="#">Restaurante La gran managua</a>
+                            <span>Con stock</span>
+                        </div>
+                        <a class="price" href="#">$25</a>
+                    </div>
+                </div>
+            </li>
+            <li class="item-c">
+                <div class="box">
+                    <!--div para imagen del producto-->
+                    <div class="slide-img">
+                        <img src="/static/jpg/Friday's.jpg" alt="Camino los robles">
+                        <div class="overlay">
+                            <a class="buy-btn" href="#">Comprar ahora</a>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="type">
+                            <a href="#">Restaurante Friday's</a>
+                            <span>No hay stock</span>
+                        </div>
+                        <a class="price" href="#">$25</a>
+                    </div>
+                </div>
+            </li>
+            <li class="item-d">
+                <div class="box">
+                    <!--div para imagen del producto-->
+                    <div class="slide-img">
+                        <img src="/static/jpg/laplancha.jpg" alt="Camino Barcelo">
+                        <div class="overlay">
+                            <a class="buy-btn" href="#">Comprar ahora</a>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="type">
+                            <a href="#">Restaurante La gran hazaña</a>
+                            <span>Con stock</span>
+                        </div>
+                        <a class="price" href="#">$25</a>
+                    </div>
+                </div>
+            </li>
+            <li class="item-e">
+                <div class="box">
+                    <!--div para imagen del producto-->
+                    <div class="slide-img">
+                        <img src="/static/jpg/Elskimo.jpg" alt="Camino Barcelo">
+                        <div class="overlay">
+                            <a class="buy-btn" href="#">Comprar ahora</a>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="type">
+                            <a href="#">Restaurante el skimo</a>
+                            <span>Con stock</span>
+                        </div>
+                        <a class="price" href="#">$25</a>
+                    </div>
+                </div>
+            </li>
+            <li class="item-f">
+                <div class="box">
+                    <!--div para imagen del producto-->
+                    <div class="slide-img">
+                        <img src="/static/jpg/Lafinca.jpg" alt="Camino Barcelo">
+                        <div class="overlay">
+                            <a class="buy-btn" href="#">Comprar ahora</a>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="type">
+                            <a href="#">Restaurante la finca</a>
+                            <span>Con stock</span>
+                        </div>
+                        <a class="price" href="#">$25</a>
+                    </div>
+                </div>
+            </li>
+            <li class="item-g">
+                <div class="box">
+                    <!--div para imagen del producto-->
+                    <div class="slide-img">
+                        <img src="/static/jpg/Volcanes.jpg" alt="Camino Barcelo">
+                        <div class="overlay">
+                            <a class="buy-btn" href="#">Comprar ahora</a>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="type">
+                            <a href="#">Restaurante volcanes</a>
+                            <span>Con stock</span>
+                        </div>
+                        <a class="price" href="#">$25</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <script type="text/javascript" src="{% static "script3.js" %}"></script>
+    </section>
+
+    <!--Body-->
+
+    <!-- Footer-->
+    <footer class="footer" id="Footer">
+        <link rel="stylesheet" href="../static/css/footer.css">
+        <div class="container-footer" data-aos="fade-down">
+            <div class="row" data-aos="fade-down">
+                <div class="footer-colum" data-aos="fade-down">
+                    <h4>Compañia</h4>
+                    <ul>
+                       <li><a href="#">Sobre nosotros</a></li>
+                       <li><a href="#">Nuestros servicios</a></li>
+                       <li><a href="#">Politica de privacidad</a></li>   
+                    </ul>
+                </div>
+                <div class="footer-colum" data-aos="fade-down">
+                    <h4>Ayuda</h4>
+                    <ul>
+                       <li><a href="#">FAQ</a></li>
+                       <li><a href="#">Paquetes</a></li>
+                       <li><a href="#">Soporte tecnico</a></li>
+                       <li><a href="#">Metodos de pago</a></li>   
+                    </ul>
+                </div>
+                <div class="footer-colum" data-aos="fade-down">
+                    <h4>Reservaciones</h4>
+                    <ul>
+                       <li><a href="#">Estado de reservación</a></li>
+                       <li><a href="#">Costos bajos</a></li>   
+                       <li><a href="#">Costos medios</a></li>
+                       <li><a href="#">Costos altos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-colum" data-aos="fade-down">
+                    <h4>Siguemos</h4>
+                    <div class="redes" data-aos="fade-down">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <script>
+ AOS.init();
+ </script>
+</body>
+</html>

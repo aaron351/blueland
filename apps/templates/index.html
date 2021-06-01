@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>BlueLand</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/index.css" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script type="text/javascript" src="{% static "jquery.flexslider.js" %}"></script>
+	<script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $('.flexslider').flexslider({
+    	touch: true,
+    	pauseOnAction: false,
+    	pauseOnHover: false,
+    });
+  });
+</script>
+</head>
+<body>  
+    <!-- slider -->
+    <link rel="stylesheet" href="../static/css/slider.css">
+<body>
+       <!-- slider -->
+       <link rel="stylesheet" href="../static/css/slider.css">
+	<div class="slideshow-container">
+        <div class="flexslider">
+            <ul class="slides">
+                <li>
+                    <img src="../static/jpg/Ometepe.png" alt="">
+                    <section class="flex-caption">
+                        <p>Turismo</p>
+                    </section>
+                </li>
+                <li>
+                    <img src="../static/jpg/HiltonPrincess.png" alt="">
+                    <section class="flex-caption">
+                        <p>Hoteles</p>
+                    </section>
+                </li>
+                <li>
+                    <img src="../static/jpg/Pacaya.png" alt="">
+                    <section class="flex-caption">
+                        <p>Restaurantes</p>
+                    </section>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- slider -->
+    <!-- Barra de menu -->
+    <header class="cotenedorhead">
+        <div class="logo" data-aos="fade-left">
+        {% if user.is_authenticated %}
+            <a href="/">Bienvenido {{ user.get_username }}</a>
+        {% else %}
+            <a href="/">BlueLand</a>
+        {% endif %}
+        </div>
+        <nav id="menu">
+            <ul>
+                <li><a href="{% url 'products' %}">servicios</a></li>
+                <li><a href="#Footer">Conocenos</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'register' %}">Register</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                {% endif %}
+
+            </ul>
+          </nav>
+        <div class="menu-toggle" style="z-index:1080;" data-aos="fade-down">
+            <i class="fa fa-bars"></i>
+        </div>
+    </header>
+    <script src="{% static "index.js" %}"></script>
+    <!-- Barra de menu -->
+    <!-- Body -->
+    {% block content %}
+    {% endblock content %}
+    <section id="volcanes">
+        <div class="izquierda-vol" data-aos="fade-down">
+            <h2>Volcan masaya</h2>
+            <p>El volcán Masaya está ubicado cerca de la ciudad de Masaya en el departamento del mismo nombre,
+            en Nicaragua a escasos 22 km al sur de la capital del país, Managua. Es uno de los 7 volcanes activos del país.</p>
+        </div>
+        <div class="derecha-vol" data-aos="fade-down">
+            <img src="../static/jpg/VolcanMasaya.jpg" alt="Volcan masaya">
+        </div>
+    </section>
+    <section id="Hoteles">
+        <div class="izquierda-hotel" data-aos="fade-down">
+            <img src="../static/jpg/Camino real.jpg" alt="Volcan masaya">
+        </div>
+        <div class="derecha-hotel" data-aos="fade-down">
+            <h2>Hotel camino real</h2>
+            <p>152 / 5000
+                Resultados de traducción
+                Este refinado hotel se encuentra a 2 km del aeropuerto internacional Augusto César Sandino y a 
+                11 km de la moderna Catedral Metropolitana de la Purísima Concepción. </p>
+        </div>
+    </section>
+    <!-- borrar -->
+    <section id="volcanes">
+        <div class="izquierda-vol" data-aos="fade-down">
+            <h2>Volcan masaya</h2>
+            <p>El volcán Masaya está ubicado cerca de la ciudad de Masaya en el departamento del mismo nombre,
+            en Nicaragua a escasos 22 km al sur de la capital del país, Managua. Es uno de los 7 volcanes activos del país.</p>
+        </div>
+        <div class="derecha-vol" data-aos="fade-down">
+            <img src="../static/jpg/VolcanMasaya.jpg" alt="Volcan masaya">
+        </div>
+    </section>
+    <section id="Hoteles">
+        <div class="izquierda-hotel" data-aos="fade-down">
+            <img src="../static/jpg/Camino real.jpg" alt="Volcan masaya">
+        </div>
+        <div class="derecha-hotel" data-aos="fade-down">
+            <h2>Hotel camino real</h2>
+            <p>152 / 5000
+                Resultados de traducción
+                Este refinado hotel se encuentra a 2 km del aeropuerto internacional Augusto César Sandino y a 
+                11 km de la moderna Catedral Metropolitana de la Purísima Concepción. </p>
+        </div>
+    </section>
+    <section id="volcanes">
+        <div class="izquierda-vol" data-aos="fade-down">
+            <h2>Volcan masaya</h2>
+            <p>El volcán Masaya está ubicado cerca de la ciudad de Masaya en el departamento del mismo nombre,
+            en Nicaragua a escasos 22 km al sur de la capital del país, Managua. Es uno de los 7 volcanes activos del país.</p>
+        </div>
+        <div class="derecha-vol" data-aos="fade-down">
+            <img src="../static/jpg/VolcanMasaya.jpg" alt="Volcan masaya">
+        </div>
+    </section>
+    <section id="Hoteles">
+        <div class="izquierda-hotel" data-aos="fade-down">
+            <img src="../static/jpg/Camino real.jpg" alt="Volcan masaya">
+        </div>
+        <div class="derecha-hotel" data-aos="fade-down">
+            <h2>Hotel camino real</h2>
+            <p>152 / 5000
+                Resultados de traducción
+                Este refinado hotel se encuentra a 2 km del aeropuerto internacional Augusto César Sandino y a 
+                11 km de la moderna Catedral Metropolitana de la Purísima Concepción. </p>
+        </div>
+    </section>
+    <!-- borrar -->
+    <!-- Footer-->
+    <footer class="footer" id="Footer">
+        <link rel="stylesheet" href="../static/css/footer.css">
+        <div class="container-footer" data-aos="fade-down">
+            <div class="row" data-aos="fade-down">
+                <div class="footer-colum" data-aos="fade-down">
+                    <h4>Compañia</h4>
+                    <ul>
+                       <li><a href="#">Sobre nosotros</a></li>
+                       <li><a href="#">Nuestros servicios</a></li>
+                       <li><a href="#">Politica de privacidad</a></li>   
+                    </ul>
+                </div>
+                <div class="footer-colum" data-aos="fade-down">
+                    <h4>Ayuda</h4>
+                    <ul>
+                       <li><a href="#">FAQ</a></li>
+                       <li><a href="#">Paquetes</a></li>
+                       <li><a href="#">Soporte tecnico</a></li>
+                       <li><a href="#">Metodos de pago</a></li>   
+                    </ul>
+                </div>
+                <div class="footer-colum" data-aos="fade-down">
+                    <h4>Reservaciones</h4>
+                    <ul>
+                       <li><a href="#">Estado de reservación</a></li>
+                       <li><a href="#">Costos bajos</a></li>   
+                       <li><a href="#">Costos medios</a></li>
+                       <li><a href="#">Costos altos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-colum" data-aos="fade-down">
+                    <h4>Siguemos</h4>
+                    <div class="redes" data-aos="fade-down">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>  
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <script>
+ AOS.init();
+ </script>
+</body>
+</html>

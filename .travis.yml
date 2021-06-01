@@ -1,0 +1,9 @@
+deploy:
+
+  provider: heroku
+
+  app: blueland-cs50
+
+  api_key: 621a6740-61ea-4fa2-beef-dd77b7b970e0
+
+    secure: $HEROKU_API_KEY
